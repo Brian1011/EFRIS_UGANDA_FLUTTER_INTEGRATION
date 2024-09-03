@@ -33,6 +33,13 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
+    sourceSets {
+        main {
+            main.java.srcDirs += 'src/main/kotlin'
+            jniLibs.srcDirs += 'src/main/jniLibs'
+        }
+    }
+
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.efris_flutter"

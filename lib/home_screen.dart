@@ -1,3 +1,4 @@
+import 'package:efris_flutter/fiscal_invoice.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -16,8 +17,10 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: () {
-
+          onPressed: () async {
+            await FiscalInvoice.getInvoiceNumber('A2DSDAD123456568').then((value) {
+              print(value);
+            });
           },
           child: const Text('Get invoice'),
         ),
